@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E22B21AE26BC7E1D00DF2E30 /* TalksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B21AD26BC7E1D00DF2E30 /* TalksController.swift */; };
+		E22B21B126BC88E100DF2E30 /* TalksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B21B026BC88E100DF2E30 /* TalksController.swift */; };
 		E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8D26B97D9300775B4A /* AppDelegate.swift */; };
 		E273DF9026B97D9300775B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8F26B97D9300775B4A /* SceneDelegate.swift */; };
 		E273DF9226B97D9300775B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF9126B97D9300775B4A /* ViewController.swift */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E22B21AD26BC7E1D00DF2E30 /* TalksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TalksController.swift; path = ../../../../../TalksController.swift; sourceTree = "<group>"; };
+		E22B21B026BC88E100DF2E30 /* TalksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksController.swift; sourceTree = "<group>"; };
 		E273DF8A26B97D9300775B4A /* TalksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273DF8D26B97D9300775B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E273DF8F26B97D9300775B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E2CECADC26BAF94D00864A37 /* TalksDecoder.swift */,
-				E22B21AD26BC7E1D00DF2E30 /* TalksController.swift */,
+				E22B21B026BC88E100DF2E30 /* TalksController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				E2CECADD26BAF94D00864A37 /* TalksDecoder.swift in Sources */,
 				E273DF9226B97D9300775B4A /* ViewController.swift in Sources */,
 				E2926A0126B9D75E0043B424 /* Talk.swift in Sources */,
-				E22B21AE26BC7E1D00DF2E30 /* TalksController.swift in Sources */,
+				E22B21B126BC88E100DF2E30 /* TalksController.swift in Sources */,
 				E2CECAE226BB373F00864A37 /* TalkViewController.swift in Sources */,
 				E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */,
 				E2CECADA26BAF5D700864A37 /* MiniatureTalk.swift in Sources */,
