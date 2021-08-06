@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var tedTalksTableView: UITableView!
     
-    var talksController: TalksController = TalksController.instance
+    var talksController: Controller = TalksController()
     
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view.
@@ -27,18 +27,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tedTalksTableView.rowHeight = UITableView.automaticDimension
         tedTalksTableView.estimatedRowHeight = 600
         
-        talksController.loadTalks()
-        tedTalksTableView.reloadData()
+        talksController.loadTalks { result in
+            self.tedTalksTableView.reloadData()
+        }
     }
 
     //Called when a cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Do something perhaps
+        // Do something for sure
     }
     
     //Sets the amount of rows on the table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let rows = talksController.tedTalks?.count else {
+        guard let rows = talksController.tedTalks?.count
+        else {
             return 0
         }
         
@@ -53,10 +55,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let talk = talksController.tedTalks?[indexPath.row] else{
             return cell
         }
-        
         cell.updateCell(talk: talk)
-    
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 

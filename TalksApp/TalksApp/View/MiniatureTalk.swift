@@ -27,13 +27,15 @@ class MiniatureTalk: UITableViewCell {
     
     func updateCell(talk: Talk)
     {
+        //Updates texts
+        self.mainSpeaker.text = "Main Speaker: \(talk.mainSpeaker)"
+        self.descript.text = talk.description
+        
+        //Finally, loads "thumbnail" url
         guard let url = URL(string: talk.url)
         else {
             return
         }
         self.thumbnail.load(URLRequest(url: url))
-        
-        self.mainSpeaker.text = "Main Speaker: \(talk.mainSpeaker)"
-        self.descript.text = talk.description
     }
 }

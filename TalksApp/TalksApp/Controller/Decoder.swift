@@ -7,21 +7,15 @@
 
 import Foundation
 
-typealias TalksResponse = (Result<[Talk], Error>) -> Void
+typealias DecoderResponse = (Result<[Talk], Error>) -> Void
 
-enum NetworkError: Error {
-    case urlError
-    case serverError
-    case parsingError
+protocol Decoder {
+    static func parseJsonToTalks(completion: @escaping DecoderResponse)
 }
 
-protocol TalksDecoder {
-    static func parseJsonToTalks(completion: @escaping TalksResponse)
-}
-
-class TalksDecoderFacade : TalksDecoder {
+class TalksDecoder : Decoder {
     
-    static func parseJsonToTalks(completion: @escaping TalksResponse)
+    static func parseJsonToTalks(completion: @escaping DecoderResponse)
     {
         guard let url = URL(string: "https://gist.githubusercontent.com/gonzaloperretti/0e79c229a5de5bacdd07f402c1a3cefd/raw/975582a4389601caa90d21227446ef2838159176/tedTalks.json")
         else{
@@ -35,7 +29,7 @@ class TalksDecoderFacade : TalksDecoder {
                   let myData = data
             else
             {
-                completion(.failure(NetworkError.serverError))
+                completion(.failure(ControllerError.serverError))
                 return
             }
             
@@ -46,7 +40,7 @@ class TalksDecoderFacade : TalksDecoder {
             }
             catch
             {
-                completion(.failure(NetworkError.parsingError))
+                completion(.failure(ControllerError.parsingError))
             }
         }
         
