@@ -19,8 +19,6 @@ class TalkDetailView: UIViewController
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var tags: UILabel!
     
-    let talksController = TalksController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

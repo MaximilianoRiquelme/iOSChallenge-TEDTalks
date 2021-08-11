@@ -21,12 +21,6 @@ class TalksController : Controller
 {
     var talksArray: [Talk]? = []
     var searchArray: [Talk]? = []
-    //var selectedTalk: Talk?
-    
-    static let instance = TalksController()
-    
-    init() {
-    }
     
     //Loads all talks into an array
     func loadAllTalks(completion: @escaping TalksResponse) {
