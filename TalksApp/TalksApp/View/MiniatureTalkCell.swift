@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class MiniatureTalk: UITableViewCell {
+class MiniatureTalkCell: UITableViewCell {
     
     @IBOutlet weak var thumbnail: WKWebView!
     @IBOutlet var mainSpeaker: UILabel!
@@ -32,10 +32,8 @@ class MiniatureTalk: UITableViewCell {
         self.descript.text = talk.description
         
         //Finally, loads "thumbnail" url
-        guard let url = URL(string: talk.url)
-        else {
-            return
+        if let url = URL(string: talk.url) {
+            self.thumbnail.load(URLRequest(url: url))
         }
-        self.thumbnail.load(URLRequest(url: url))
     }
 }

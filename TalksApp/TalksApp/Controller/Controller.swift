@@ -11,26 +11,35 @@ typealias TalksResponse = (Result<[Talk], Error>) -> Void
 
 protocol Controller
 {
-    var tedTalks: [Talk]? { get }
+    var talksArray: [Talk]? { get }
+    var searchArray: [Talk]? { get set }
     
-    func loadTalks(completion: @escaping TalksResponse)
+    func loadAllTalks(completion: @escaping TalksResponse)
 }
 
 class TalksController : Controller
 {
-    var tedTalks: [Talk]? = []
+    var talksArray: [Talk]? = []
+    var searchArray: [Talk]? = []
+    //var selectedTalk: Talk?
     
-    func loadTalks(completion: @escaping TalksResponse) {
-        TalksDecoder.parseJsonToTalks() {
+    static let instance = TalksController()
+    
+    init() {
+    }
+    
+    //Loads all talks into an array
+    func loadAllTalks(completion: @escaping TalksResponse) {
+        concreteDecoder.parseJsonToArray() {
             [weak self] (result) in
                 DispatchQueue.main.async {
                     switch result
                     {
                         case .success(let talksDecoded):
-                            self?.tedTalks = talksDecoded
+                            self?.talksArray = talksDecoded
                             completion(result)
                         case .failure(_):
-                            self?.tedTalks = []
+                            self?.talksArray = []
                             completion(result)
                     }
                 }

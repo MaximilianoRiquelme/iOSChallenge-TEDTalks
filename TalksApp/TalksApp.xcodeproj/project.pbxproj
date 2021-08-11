@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E22B21B126BC88E100DF2E30 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B21B026BC88E100DF2E30 /* Controller.swift */; };
+		E240E6AE26C4280E00F8206E /* TalkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240E6AD26C4280E00F8206E /* TalkDetailView.swift */; };
 		E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8D26B97D9300775B4A /* AppDelegate.swift */; };
 		E273DF9026B97D9300775B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8F26B97D9300775B4A /* SceneDelegate.swift */; };
 		E273DF9226B97D9300775B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF9126B97D9300775B4A /* ViewController.swift */; };
@@ -18,11 +19,9 @@
 		E273DFB026B97D9600775B4A /* TalksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DFAF26B97D9600775B4A /* TalksAppUITests.swift */; };
 		E280F6A126BD80FF00AA646D /* ControllerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280F6A026BD80FF00AA646D /* ControllerError.swift */; };
 		E2926A0126B9D75E0043B424 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2926A0026B9D75E0043B424 /* Talk.swift */; };
-		E2CECADA26BAF5D700864A37 /* MiniatureTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECAD826BAF5D700864A37 /* MiniatureTalk.swift */; };
-		E2CECADB26BAF5D700864A37 /* MiniatureTalk.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CECAD926BAF5D700864A37 /* MiniatureTalk.xib */; };
+		E2CECADA26BAF5D700864A37 /* MiniatureTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECAD826BAF5D700864A37 /* MiniatureTalkCell.swift */; };
+		E2CECADB26BAF5D700864A37 /* MiniatureTalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CECAD926BAF5D700864A37 /* MiniatureTalkCell.xib */; };
 		E2CECADD26BAF94D00864A37 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECADC26BAF94D00864A37 /* Decoder.swift */; };
-		E2CECAE226BB373F00864A37 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECAE026BB373F00864A37 /* TalkViewController.swift */; };
-		E2CECAE326BB373F00864A37 /* TalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CECAE126BB373F00864A37 /* TalkViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		E22B21B026BC88E100DF2E30 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		E240E6AD26C4280E00F8206E /* TalkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailView.swift; sourceTree = "<group>"; };
 		E273DF8A26B97D9300775B4A /* TalksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273DF8D26B97D9300775B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E273DF8F26B97D9300775B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,11 +60,9 @@
 		E273DFB126B97D9600775B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E280F6A026BD80FF00AA646D /* ControllerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerError.swift; sourceTree = "<group>"; };
 		E2926A0026B9D75E0043B424 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		E2CECAD826BAF5D700864A37 /* MiniatureTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniatureTalk.swift; sourceTree = "<group>"; };
-		E2CECAD926BAF5D700864A37 /* MiniatureTalk.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniatureTalk.xib; sourceTree = "<group>"; };
+		E2CECAD826BAF5D700864A37 /* MiniatureTalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniatureTalkCell.swift; sourceTree = "<group>"; };
+		E2CECAD926BAF5D700864A37 /* MiniatureTalkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniatureTalkCell.xib; sourceTree = "<group>"; };
 		E2CECADC26BAF94D00864A37 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
-		E2CECAE026BB373F00864A37 /* TalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
-		E2CECAE126BB373F00864A37 /* TalkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,11 +165,10 @@
 		E2CECAD726BAF53100864A37 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E2CECAD826BAF5D700864A37 /* MiniatureTalk.swift */,
-				E2CECAD926BAF5D700864A37 /* MiniatureTalk.xib */,
-				E2CECAE026BB373F00864A37 /* TalkViewController.swift */,
-				E2CECAE126BB373F00864A37 /* TalkViewController.xib */,
+				E2CECAD826BAF5D700864A37 /* MiniatureTalkCell.swift */,
+				E2CECAD926BAF5D700864A37 /* MiniatureTalkCell.xib */,
 				E273DF9126B97D9300775B4A /* ViewController.swift */,
+				E240E6AD26C4280E00F8206E /* TalkDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,9 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CECADB26BAF5D700864A37 /* MiniatureTalk.xib in Resources */,
+				E2CECADB26BAF5D700864A37 /* MiniatureTalkCell.xib in Resources */,
 				E273DF9A26B97D9600775B4A /* LaunchScreen.storyboard in Resources */,
-				E2CECAE326BB373F00864A37 /* TalkViewController.xib in Resources */,
 				E273DF9726B97D9600775B4A /* Assets.xcassets in Resources */,
 				E273DF9526B97D9300775B4A /* Main.storyboard in Resources */,
 			);
@@ -313,10 +309,10 @@
 				E2926A0126B9D75E0043B424 /* Talk.swift in Sources */,
 				E22B21B126BC88E100DF2E30 /* Controller.swift in Sources */,
 				E280F6A126BD80FF00AA646D /* ControllerError.swift in Sources */,
-				E2CECAE226BB373F00864A37 /* TalkViewController.swift in Sources */,
 				E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */,
-				E2CECADA26BAF5D700864A37 /* MiniatureTalk.swift in Sources */,
+				E2CECADA26BAF5D700864A37 /* MiniatureTalkCell.swift in Sources */,
 				E273DF9026B97D9300775B4A /* SceneDelegate.swift in Sources */,
+				E240E6AE26C4280E00F8206E /* TalkDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
