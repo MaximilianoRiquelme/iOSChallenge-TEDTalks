@@ -1,5 +1,5 @@
 //
-//  TalkDetailViewController.swift
+//  TalkDetailedView.swift
 //  TalksApp
 //
 //  Created by Maximiliano Riquelme Vera on 11/08/2021.
@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class TalkDetailView: UIViewController
+class TalkDetailedView: UIViewController
 {
     
     @IBOutlet weak var talkTitle: UILabel!
@@ -24,17 +24,17 @@ class TalkDetailView: UIViewController
         // Do any additional setup after loading the view.
     }
     
-    func loadTalk(selectedTalk: Talk)
+    func loadDetailController(detailController: DetailController)
     {
         DispatchQueue.main.async {
-            self.talkTitle.text = selectedTalk.title
-            self.views.text = "# of views \(String(describing: selectedTalk.views))"
-            self.publishedDate.text = "Published Date: \(String(describing: selectedTalk.publishedDate))"
-            self.name.text = selectedTalk.name
-            self.descript.text = selectedTalk.description
-            self.tags.text = "Tags: \(String(describing: selectedTalk.tags.description))"
+            self.talkTitle.text = detailController.title
+            self.views.text = detailController.views
+            self.publishedDate.text = detailController.publishedDate
+            self.name.text = detailController.name
+            self.descript.text = detailController.description
+            self.tags.text = detailController.tags
             
-            if let url = URL(string: selectedTalk.url) {
+            if let url = detailController.url {
                 self.video.load(URLRequest(url: url))
             }
         }

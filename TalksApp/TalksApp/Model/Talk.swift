@@ -37,4 +37,12 @@ struct Talk: Codable {
     }
 }
 
-
+enum TalkFilter: String
+{
+    case description = "Description"
+    case mainSpeaker = "Main Speaker"
+    case name = "Name"
+    case speakerOccupation = "Speaker Occupation"
+    case tags = "Tags"
+    case title = "Title"
+}

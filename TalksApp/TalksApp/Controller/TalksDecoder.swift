@@ -1,5 +1,5 @@
 //
-//  TalksDecoderFacade.swift
+//  TalksDecoder.swift
 //  TalksApp
 //
 //  Created by Maximiliano Riquelme Vera on 04/08/2021.
@@ -13,7 +13,7 @@ protocol Decoder {
     static func parseJsonToArray(completion: @escaping DecoderResponse)
 }
 
-class concreteDecoder : Decoder {
+class TalksDecoder : Decoder {
     
     static func parseJsonToArray(completion: @escaping DecoderResponse)
     {
@@ -29,7 +29,7 @@ class concreteDecoder : Decoder {
                   let myData = data
             else
             {
-                completion(.failure(ControllerError.serverError))
+                completion(.failure(ErrorController.serverError))
                 return
             }
             
@@ -40,7 +40,7 @@ class concreteDecoder : Decoder {
             }
             catch
             {
-                completion(.failure(ControllerError.parsingError))
+                completion(.failure(ErrorController.parsingError))
             }
         }
         

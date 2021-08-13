@@ -13,22 +13,25 @@ class ViewController: UIViewController
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var talksTableView: UITableView!
     
-    let searchController = UISearchController()
-    let talksController = TalksController()
+    let talksController = TalksControllerImp()
+    var searching = false
+    var filters: [TalkFilter] = [TalkFilter.description, TalkFilter.mainSpeaker, TalkFilter.name, TalkFilter.speakerOccupation, TalkFilter.tags, TalkFilter.title]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.loadSearchBar()
+        self.loadPickerView()
         self.loadTableView()
     }
 }
 
+//Adds the required functions to manage the TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource
 {
     func loadTableView() {
-        let nib = UINib(nibName: "MiniatureTalkCell", bundle: nil)
-        talksTableView.register(nib, forCellReuseIdentifier: "MiniatureTalkCell")
+        let nib = UINib(nibName: "TalkCell", bundle: nil)
+        talksTableView.register(nib, forCellReuseIdentifier: "TalkCell")
         
         talksTableView.delegate = self
         talksTableView.dataSource = self
@@ -48,19 +51,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "talkDetailSegue") {
-            let indexPath = self.talksTableView.indexPathForSelectedRow
-            let destinationView = segue.destination as? TalkDetailView
             
-            if searchController.isActive {
-                if let selectedTalk = talksController.searchArray?[indexPath!.row] {
-                    destinationView?.loadTalk(selectedTalk: selectedTalk)
-                }
-            }
-            else {
-                if let selectedTalk = talksController.talksArray?[indexPath!.row] {
-                    destinationView?.loadTalk(selectedTalk: selectedTalk)
-                }
-            }
+            let indexPath = self.talksTableView.indexPathForSelectedRow
+            let destinationView = segue.destination as? TalkDetailedView
+            
+            let selectedTalk = searching ? talksController.filteredTalks?[indexPath!.row] : talksController.talks?[indexPath!.row]
+            let detailedController = DetailControllerImp(talk: selectedTalk!)
+            destinationView?.loadDetailController(detailController: detailedController)
             
             self.talksTableView.deselectRow(at: indexPath!, animated: true)
         }
@@ -69,32 +66,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     //Sets the amount of rows on the table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if searchController.isActive {
-            if let rows = talksController.searchArray?.count {
-                return rows
-            }
-        }
-        else {
-            if let rows = talksController.talksArray?.count {
-                return rows
-            }
-        }
+        var rows: Int?
         
-        return 0
+        rows = searching ? talksController.filteredTalks?.count : talksController.talks?.count
+        
+        return rows ?? Int.zero
     }
     
     //Loads all cells in order
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MiniatureTalkCell", for: indexPath) as! MiniatureTalkCell
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TalkCell", for: indexPath) as? TalkCell
+        else {
+            return UITableViewCell()
+        }
         
         //Change the cell with the proper information
-        if searchController.isActive {
-            if let talk = talksController.searchArray?[indexPath.row] {
+        if searching {
+            if let talk = talksController.filteredTalks?[indexPath.row] {
                 cell.updateCell(talk: talk)
             }
         }
         else {
-            if let talk = talksController.talksArray?[indexPath.row] {
+            if let talk = talksController.talks?[indexPath.row] {
                 cell.updateCell(talk: talk)
             }
         }
@@ -107,32 +101,42 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     }
 }
 
-extension ViewController: UISearchBarDelegate, UISearchResultsUpdating
+//Adds the required means to manage the SearchBar
+extension ViewController: UISearchBarDelegate
 {
     func loadSearchBar() {
-        self.searchController.searchResultsUpdater = self
         self.searchBar.delegate = self
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBarAux = searchController.searchBar
-        let searchText = searchBarAux.text!
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filterForSeachText(searchText: searchText)
+        let filter = pickerView.selectedRow(inComponent: 0).description
+        self.talksController.filterTalks(filter: filter, searchText: searchText)
+        searching = true
+        self.talksTableView.reloadData()
+    }
+}
+
+//Adds the required means to manage the PickerView
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource
+{
+    func loadPickerView() {
+        self.pickerView.delegate = self
     }
     
-    func filterForSeachText(searchText: String) {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 6
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        talksController.searchArray = talksController.talksArray?.filter
-        {
-            Talk in
-            if(searchController.searchBar.text != "") {
-                let searchTextMatch = Talk.name.lowercased().contains(searchText.lowercased())
-                return searchTextMatch
-            }
-            else {
-                 return false
-            }
-        }
+        let label = UILabel()
+        label.text = filters[row].rawValue
+        label.sizeToFit()
+        return label
     }
 }
