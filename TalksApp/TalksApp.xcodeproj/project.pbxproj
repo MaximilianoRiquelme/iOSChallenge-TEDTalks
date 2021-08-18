@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E22B21B126BC88E100DF2E30 /* TalksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B21B026BC88E100DF2E30 /* TalksController.swift */; };
+		E240E6AE26C4280E00F8206E /* TalkDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240E6AD26C4280E00F8206E /* TalkDetailedView.swift */; };
+		E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8D26B97D9300775B4A /* AppDelegate.swift */; };
+		E273DF9026B97D9300775B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF8F26B97D9300775B4A /* SceneDelegate.swift */; };
+		E273DF9226B97D9300775B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DF9126B97D9300775B4A /* ViewController.swift */; };
+		E273DF9526B97D9300775B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273DF9326B97D9300775B4A /* Main.storyboard */; };
+		E273DF9726B97D9600775B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E273DF9626B97D9600775B4A /* Assets.xcassets */; };
+		E273DF9A26B97D9600775B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273DF9826B97D9600775B4A /* LaunchScreen.storyboard */; };
+		E273DFA526B97D9600775B4A /* TalksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DFA426B97D9600775B4A /* TalksAppTests.swift */; };
+		E273DFB026B97D9600775B4A /* TalksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273DFAF26B97D9600775B4A /* TalksAppUITests.swift */; };
+		E280F6A126BD80FF00AA646D /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280F6A026BD80FF00AA646D /* ErrorController.swift */; };
+		E2926A0126B9D75E0043B424 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2926A0026B9D75E0043B424 /* Talk.swift */; };
+		E29F02A426C586810049D455 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F02A326C586810049D455 /* DetailController.swift */; };
+		E2CECADA26BAF5D700864A37 /* TalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECAD826BAF5D700864A37 /* TalkCell.swift */; };
+		E2CECADB26BAF5D700864A37 /* TalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CECAD926BAF5D700864A37 /* TalkCell.xib */; };
+		E2CECADD26BAF94D00864A37 /* TalksDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CECADC26BAF94D00864A37 /* TalksDecoder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E273DFA126B97D9600775B4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273DF8226B97D9300775B4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E273DF8926B97D9300775B4A;
+			remoteInfo = TalksApp;
+		};
+		E273DFAC26B97D9600775B4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273DF8226B97D9300775B4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E273DF8926B97D9300775B4A;
+			remoteInfo = TalksApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E22B21B026BC88E100DF2E30 /* TalksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksController.swift; sourceTree = "<group>"; };
+		E240E6AD26C4280E00F8206E /* TalkDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailedView.swift; sourceTree = "<group>"; };
+		E273DF8A26B97D9300775B4A /* TalksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E273DF8D26B97D9300775B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E273DF8F26B97D9300775B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E273DF9126B97D9300775B4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E273DF9426B97D9300775B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E273DF9626B97D9600775B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E273DF9926B97D9600775B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E273DF9B26B97D9600775B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E273DFA026B97D9600775B4A /* TalksAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalksAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E273DFA426B97D9600775B4A /* TalksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksAppTests.swift; sourceTree = "<group>"; };
+		E273DFA626B97D9600775B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E273DFAB26B97D9600775B4A /* TalksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E273DFAF26B97D9600775B4A /* TalksAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksAppUITests.swift; sourceTree = "<group>"; };
+		E273DFB126B97D9600775B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E280F6A026BD80FF00AA646D /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
+		E2926A0026B9D75E0043B424 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		E29F02A326C586810049D455 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		E2CECAD826BAF5D700864A37 /* TalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCell.swift; sourceTree = "<group>"; };
+		E2CECAD926BAF5D700864A37 /* TalkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkCell.xib; sourceTree = "<group>"; };
+		E2CECADC26BAF94D00864A37 /* TalksDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksDecoder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E273DF8726B97D9300775B4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DF9D26B97D9600775B4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DFA826B97D9600775B4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E273DF8126B97D9300775B4A = {
+			isa = PBXGroup;
+			children = (
+				E273DF8C26B97D9300775B4A /* TalksApp */,
+				E273DFA326B97D9600775B4A /* TalksAppTests */,
+				E273DFAE26B97D9600775B4A /* TalksAppUITests */,
+				E273DF8B26B97D9300775B4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E273DF8B26B97D9300775B4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E273DF8A26B97D9300775B4A /* TalksApp.app */,
+				E273DFA026B97D9600775B4A /* TalksAppTests.xctest */,
+				E273DFAB26B97D9600775B4A /* TalksAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E273DF8C26B97D9300775B4A /* TalksApp */ = {
+			isa = PBXGroup;
+			children = (
+				E2CECAD726BAF53100864A37 /* View */,
+				E29269FF26B9AC2A0043B424 /* Controller */,
+				E29269FE26B9AC240043B424 /* Model */,
+				E273DF8D26B97D9300775B4A /* AppDelegate.swift */,
+				E273DF8F26B97D9300775B4A /* SceneDelegate.swift */,
+				E273DF9326B97D9300775B4A /* Main.storyboard */,
+				E273DF9626B97D9600775B4A /* Assets.xcassets */,
+				E273DF9826B97D9600775B4A /* LaunchScreen.storyboard */,
+				E273DF9B26B97D9600775B4A /* Info.plist */,
+			);
+			path = TalksApp;
+			sourceTree = "<group>";
+		};
+		E273DFA326B97D9600775B4A /* TalksAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E273DFA426B97D9600775B4A /* TalksAppTests.swift */,
+				E273DFA626B97D9600775B4A /* Info.plist */,
+			);
+			path = TalksAppTests;
+			sourceTree = "<group>";
+		};
+		E273DFAE26B97D9600775B4A /* TalksAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E273DFAF26B97D9600775B4A /* TalksAppUITests.swift */,
+				E273DFB126B97D9600775B4A /* Info.plist */,
+			);
+			path = TalksAppUITests;
+			sourceTree = "<group>";
+		};
+		E29269FE26B9AC240043B424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2926A0026B9D75E0043B424 /* Talk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E29269FF26B9AC2A0043B424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2CECADC26BAF94D00864A37 /* TalksDecoder.swift */,
+				E22B21B026BC88E100DF2E30 /* TalksController.swift */,
+				E280F6A026BD80FF00AA646D /* ErrorController.swift */,
+				E29F02A326C586810049D455 /* DetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2CECAD726BAF53100864A37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2CECAD826BAF5D700864A37 /* TalkCell.swift */,
+				E2CECAD926BAF5D700864A37 /* TalkCell.xib */,
+				E240E6AD26C4280E00F8206E /* TalkDetailedView.swift */,
+				E273DF9126B97D9300775B4A /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E273DF8926B97D9300775B4A /* TalksApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E273DFB426B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksApp" */;
+			buildPhases = (
+				E273DF8626B97D9300775B4A /* Sources */,
+				E273DF8726B97D9300775B4A /* Frameworks */,
+				E273DF8826B97D9300775B4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalksApp;
+			productName = TalksApp;
+			productReference = E273DF8A26B97D9300775B4A /* TalksApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E273DF9F26B97D9600775B4A /* TalksAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E273DFB726B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksAppTests" */;
+			buildPhases = (
+				E273DF9C26B97D9600775B4A /* Sources */,
+				E273DF9D26B97D9600775B4A /* Frameworks */,
+				E273DF9E26B97D9600775B4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E273DFA226B97D9600775B4A /* PBXTargetDependency */,
+			);
+			name = TalksAppTests;
+			productName = TalksAppTests;
+			productReference = E273DFA026B97D9600775B4A /* TalksAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E273DFAA26B97D9600775B4A /* TalksAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E273DFBA26B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksAppUITests" */;
+			buildPhases = (
+				E273DFA726B97D9600775B4A /* Sources */,
+				E273DFA826B97D9600775B4A /* Frameworks */,
+				E273DFA926B97D9600775B4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E273DFAD26B97D9600775B4A /* PBXTargetDependency */,
+			);
+			name = TalksAppUITests;
+			productName = TalksAppUITests;
+			productReference = E273DFAB26B97D9600775B4A /* TalksAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E273DF8226B97D9300775B4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E273DF8926B97D9300775B4A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					E273DF9F26B97D9600775B4A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = E273DF8926B97D9300775B4A;
+					};
+					E273DFAA26B97D9600775B4A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = E273DF8926B97D9300775B4A;
+					};
+				};
+			};
+			buildConfigurationList = E273DF8526B97D9300775B4A /* Build configuration list for PBXProject "TalksApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E273DF8126B97D9300775B4A;
+			productRefGroup = E273DF8B26B97D9300775B4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E273DF8926B97D9300775B4A /* TalksApp */,
+				E273DF9F26B97D9600775B4A /* TalksAppTests */,
+				E273DFAA26B97D9600775B4A /* TalksAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E273DF8826B97D9300775B4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CECADB26BAF5D700864A37 /* TalkCell.xib in Resources */,
+				E273DF9A26B97D9600775B4A /* LaunchScreen.storyboard in Resources */,
+				E273DF9726B97D9600775B4A /* Assets.xcassets in Resources */,
+				E273DF9526B97D9300775B4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DF9E26B97D9600775B4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DFA926B97D9600775B4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E273DF8626B97D9300775B4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CECADD26BAF94D00864A37 /* TalksDecoder.swift in Sources */,
+				E273DF9226B97D9300775B4A /* ViewController.swift in Sources */,
+				E2926A0126B9D75E0043B424 /* Talk.swift in Sources */,
+				E22B21B126BC88E100DF2E30 /* TalksController.swift in Sources */,
+				E280F6A126BD80FF00AA646D /* ErrorController.swift in Sources */,
+				E273DF8E26B97D9300775B4A /* AppDelegate.swift in Sources */,
+				E2CECADA26BAF5D700864A37 /* TalkCell.swift in Sources */,
+				E273DF9026B97D9300775B4A /* SceneDelegate.swift in Sources */,
+				E29F02A426C586810049D455 /* DetailController.swift in Sources */,
+				E240E6AE26C4280E00F8206E /* TalkDetailedView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DF9C26B97D9600775B4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E273DFA526B97D9600775B4A /* TalksAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E273DFA726B97D9600775B4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E273DFB026B97D9600775B4A /* TalksAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E273DFA226B97D9600775B4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E273DF8926B97D9300775B4A /* TalksApp */;
+			targetProxy = E273DFA126B97D9600775B4A /* PBXContainerItemProxy */;
+		};
+		E273DFAD26B97D9600775B4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E273DF8926B97D9300775B4A /* TalksApp */;
+			targetProxy = E273DFAC26B97D9600775B4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E273DF9326B97D9300775B4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E273DF9426B97D9300775B4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E273DF9826B97D9600775B4A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E273DF9926B97D9600775B4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E273DFB226B97D9600775B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E273DFB326B97D9600775B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E273DFB526B97D9600775B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E273DFB626B97D9600775B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E273DFB826B97D9600775B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalksApp.app/TalksApp";
+			};
+			name = Debug;
+		};
+		E273DFB926B97D9600775B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalksApp.app/TalksApp";
+			};
+			name = Release;
+		};
+		E273DFBB26B97D9600775B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TalksApp;
+			};
+			name = Debug;
+		};
+		E273DFBC26B97D9600775B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3C54K4F4K;
+				INFOPLIST_FILE = TalksAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxirv.TalksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TalksApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E273DF8526B97D9300775B4A /* Build configuration list for PBXProject "TalksApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E273DFB226B97D9600775B4A /* Debug */,
+				E273DFB326B97D9600775B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E273DFB426B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E273DFB526B97D9600775B4A /* Debug */,
+				E273DFB626B97D9600775B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E273DFB726B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E273DFB826B97D9600775B4A /* Debug */,
+				E273DFB926B97D9600775B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E273DFBA26B97D9600775B4A /* Build configuration list for PBXNativeTarget "TalksAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E273DFBB26B97D9600775B4A /* Debug */,
+				E273DFBC26B97D9600775B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E273DF8226B97D9300775B4A /* Project object */;
+}
